@@ -1,0 +1,14 @@
+export const SIDEBAR_BREAKPOINT = 830;
+export const BUTTON_ICON_SIZE = 22;
+export const RESPONSIVE_BUTTON_ICON_SIZE = ['1rem', '1.1rem', '2rem'];
+export const SIDEBAR_ICON_SIZE = '1.9rem';
+export const TWELVE_INCHES_LAPTOP_BREAKPOINT = 1100;
+export const TAB_BREAKPOINT = 600;
+export const TABLE_BODY_FONT = ['1.25rem', '1.25rem', '1.4rem'];
+export const TABLE_HEAD_FONT = ['1.3rem', '1.3rem', '1.6rem'];
+export const SIDEBAR_WIDTH = '21rem';
+export const COLLAPSED_SIDEBAR_WIDTH = '5rem';
+export const PAGE_HEADING_FONTSIZE = ['1.6rem', '1.6rem', '2.5rem'];
+export const LANDING_SUB_HEADER_FONT = ['1.6rem', '1.6rem', '2rem'];
+export const LANDING_PARAGRAPH_FONT = ['1.2rem', '1.2rem', '1.6rem'];
+export const TAB_HEIGHT = '40rem';
