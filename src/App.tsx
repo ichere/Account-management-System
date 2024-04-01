@@ -1,10 +1,11 @@
 import './App.css'
-import Navbar from './components/Navbar'
+import HeroSection from './components/HeroSection'
 
-function App() {
+
+function App(): JSX.Element {
   return (
     <>
-      <Navbar />
+      <HeroSection />
     </>
   )
 }
