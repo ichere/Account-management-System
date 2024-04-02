@@ -28,11 +28,11 @@ export const LargeBtn = ({
       color={color}
       bg={bg}
       borderRadius={'.8rem'}
-      border={borderColor ? `1px solid ${borderColor}` : `1px solid ${COLORS.yellow}`}
+      border={borderColor ? `1px solid ${borderColor}` : `1px solid ${COLORS.blue}`}
       fontSize={fontSize || ['1.2rem', '1.2rem', '1.4rem']}
       fontWeight="semibold"
       _hover={{
-        bg: bg || COLORS.lightYellow,
+        bg: bg || COLORS.blue,
         color,
       }}
       isDisabled={disabled}
