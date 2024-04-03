@@ -1,19 +1,13 @@
 import './App.css'
-import { Heading } from "@chakra-ui/react"
-import { COLORS } from './constants/colors'
+import HeroSection from './components/HeroSection'
+import Navbar from './components/Navbar'
 
-function App() {
+
+function App(): JSX.Element {
   return (
     <>
-      <Heading
-        as={'h6'}
-        alignItems={'center'}
-        color={COLORS.black}
-        fontSize={'4.5rem'}
-        fontWeight={600}
-      >
-        Account Management Page
-      </Heading>
+      <Navbar />
+      <HeroSection />
     </>
   )
 }

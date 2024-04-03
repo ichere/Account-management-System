@@ -29,4 +29,5 @@ export const COLORS = {
   red: '#FF0000',
   orange: '#F06705',
   ivory: '#FFFFF0',
+  blue: '#6C63FF',
 };
