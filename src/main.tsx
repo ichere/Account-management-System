@@ -12,6 +12,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { COLORS } from './constants/colors';
 import Register from './pages/Register';
 import Login from './pages/Login';
+import App from './App';
 
 const { ToastContainer } = createStandaloneToast();
 
@@ -41,7 +42,7 @@ const theme = extendTheme({
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <div>Hello world!</div>,
+    element: <App />,
   },
   {
     path: '/register',

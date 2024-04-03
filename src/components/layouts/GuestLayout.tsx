@@ -7,6 +7,7 @@ const GuestLayout = ({ children }: { children: React.ReactNode }) => {
     <div
       style={{
         backgroundColor: '#eee',
+        paddingTop: '3.5rem',
       }}
     >
       <Navbar />
