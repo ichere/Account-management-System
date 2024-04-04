@@ -2,12 +2,18 @@ import { Box, Flex, Text } from "@chakra-ui/react"
 import { LargeBtn } from "./LargeBtn"
 import { COLORS } from "../constants/colors"
 import { TAB_BREAKPOINT } from "../constants/appConstants"
+import { UNAUTHENTICATED_ROUTES } from "../navigation/routes"
+import { useNavigate } from "react-router-dom"
 
 
 const Navbar = () => {
+  const navigate = useNavigate();
+  const handleSubmit = () => {
+    navigate(UNAUTHENTICATED_ROUTES.login);
+  };
   return (
     <>
-    {window.innerWidth < TAB_BREAKPOINT ? (
+    {900 < TAB_BREAKPOINT ? (
       <>
        <Flex
         position="fixed"
@@ -58,6 +64,7 @@ const Navbar = () => {
             color={COLORS.black}
             text={' Sign Up'}
             loading={false}
+            handleSubmit={handleSubmit}
           />
         </Box>
         <Box width={['5.5rem', '10rem', '13rem']}>

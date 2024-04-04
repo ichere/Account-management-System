@@ -1,9 +1,9 @@
 import { useEffect, useRef } from 'react';
 
 export enum PageTitle {
-  Home = 'Coge | Home',
-  Register = 'Coge | Register',
-  Login = 'Coge | Login',
+  Home = 'Project | Home',
+  Register = 'Project | Register',
+  Login = 'Project | Login',
 }
 
 export const useDocumentTitle = (title: string, prevailOnUnmount = false): void => {

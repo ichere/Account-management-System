@@ -1,7 +1,8 @@
 import { AiOutlineLock } from 'react-icons/ai';
 import { MdOutlineAlternateEmail } from 'react-icons/md';
+import { Box, Text } from "@chakra-ui/react"
 import ResponsiveAuthWrapper from '../components/ResponsiveAuthWrapper'
-import { Box, Text } from '@chakra-ui/layout'
+
 import { CustomInputGroup } from '../components/CustomInputGroup'
 import AuthHeader from '../components/AuthHeader'
 import { COLORS } from '../constants/colors'
@@ -27,9 +28,9 @@ const LoginPage = () => {
   const { formValues, formErrors, handleChange, handleBlur, touchedFields, validateForm } =
     useFormValidation(initialFormFields, loginValidationRules);
     const handleSubmit = async () => {
-        const isValid = validateForm();
-        if (!isValid) return;
-        // await login();
+      const isValid = validateForm();
+      if (!isValid) return;
+      // await login();
     };
   return (
     <ResponsiveAuthWrapper>
@@ -75,14 +76,14 @@ const LoginPage = () => {
           )}
         </Box>
         <Box position="relative" mt="3.5rem">
-          {/* <LargeBtn
+          <LargeBtn
             text={'Log in'}
             bg={COLORS.yellow}
             color={COLORS.black}
             h={['4rem', '4rem', '4.5rem']}
             handleSubmit={handleSubmit}
-            loading={loading}
-          /> */}
+            loading={false}
+          />
           <AlreadyHAveAnAccount
             text="Don't have an account?"
             linkText="Register"
