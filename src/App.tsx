@@ -1,13 +1,12 @@
 import './App.css'
-import HeroSection from './components/HeroSection'
-import Navbar from './components/Navbar'
+
+import LandingPage from './pages/LandingPage'
 
 
 function App(): JSX.Element {
   return (
     <>
-      <Navbar />
-      <HeroSection />
+      <LandingPage />
     </>
   )
 }

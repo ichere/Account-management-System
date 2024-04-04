@@ -5,5 +5,6 @@ export const ROUTES = {
 export const UNAUTHENTICATED_ROUTES = {
   landing: '/',
   login: '/login',
-  signUp: '/signUp'
+  signUp: '/signUp',
+  resetPassword: './resetPassword',
 };
