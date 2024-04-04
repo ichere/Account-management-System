@@ -1,16 +1,24 @@
 import './index.css';
 
-import { ChakraProvider, createStandaloneToast, extendTheme } from '@chakra-ui/react';
+import {
+  ChakraProvider,
+  createStandaloneToast,
+  extendTheme,
+} from '@chakra-ui/react';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import App from './App';
 import { COLORS } from './constants/colors';
+import Register from './pages/Register';
+import Login from './pages/Login';
+import App from './App';
 
 const { ToastContainer } = createStandaloneToast();
 
 const theme = extendTheme({
   colors: {
+    primary: 'blue',
     white: COLORS.white,
     black: COLORS.black,
     bgGrey: COLORS.bgGrey,
@@ -23,9 +31,6 @@ const theme = extendTheme({
     lightgreen: {
       500: '#3C7B79',
     },
-    primary: {
-      500: COLORS.yellow,
-    },
   },
   fonts: {
     heading: 'Open Sans',
@@ -33,6 +38,21 @@ const theme = extendTheme({
     family: `'Turbine-Medium'`,
   },
 });
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <App />,
+  },
+  {
+    path: '/register',
+    element: <Register />,
+  },
+  {
+    path: '/login',
+    element: <Login />,
+  },
+]);
 
 // Sentry.init({
 //   dsn: 'https://31069d5c32e04ac0814667b90827897b@o523824.ingest.sentry.io/4505128370896896',
@@ -46,8 +66,8 @@ const theme = extendTheme({
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <ChakraProvider theme={theme}>
-      <App />
+      <RouterProvider router={router} />
       <ToastContainer />
     </ChakraProvider>
-  </React.StrictMode>,
+  </React.StrictMode>
 );

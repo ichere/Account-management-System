@@ -3,7 +3,6 @@ import { Button } from '@chakra-ui/react';
 import { COLORS } from '../constants/colors';
 import { ParentCompProps } from '../forms/formProps';
 
-
 export const LargeBtn = ({
   childComp,
   rightIcon,
@@ -17,10 +16,11 @@ export const LargeBtn = ({
   borderColor,
   handleSubmit = () => null,
   loading,
+  ...rest
 }: ParentCompProps): JSX.Element => {
   return (
     <Button
-      type="submit"
+      type='submit'
       leftIcon={childComp}
       rightIcon={rightIcon}
       width={w || '100%'}
@@ -28,9 +28,11 @@ export const LargeBtn = ({
       color={color}
       bg={bg}
       borderRadius={'.8rem'}
-      border={borderColor ? `1px solid ${borderColor}` : `1px solid ${COLORS.blue}`}
+      border={
+        borderColor ? `1px solid ${borderColor}` : `1px solid ${COLORS.blue}`
+      }
       fontSize={fontSize || ['1.2rem', '1.2rem', '1.4rem']}
-      fontWeight="semibold"
+      fontWeight='semibold'
       _hover={{
         bg: bg || COLORS.blue,
         color,
@@ -38,6 +40,7 @@ export const LargeBtn = ({
       isDisabled={disabled}
       onClick={handleSubmit}
       isLoading={loading}
+      {...rest}
     >
       {text}
     </Button>
