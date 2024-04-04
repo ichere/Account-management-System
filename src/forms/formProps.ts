@@ -26,7 +26,10 @@ export interface FormControlProps {
   disabled?: boolean;
 }
 
-export type FormControlPropsWithRef = Omit<FormControlProps, 'value' | 'handleChange'> & {
+export type FormControlPropsWithRef = Omit<
+  FormControlProps,
+  'value' | 'handleChange'
+> & {
   inputRef: RefObject<HTMLInputElement>;
 };
 
