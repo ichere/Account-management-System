@@ -1,9 +1,9 @@
 import './index.css';
 
 import {
-  ChakraProvider,
-  createStandaloneToast,
-  extendTheme,
+    ChakraProvider,
+    createStandaloneToast,
+    extendTheme
 } from '@chakra-ui/react';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
@@ -13,45 +13,51 @@ import { COLORS } from './constants/colors';
 import Register from './pages/Register';
 import Login from './pages/Login';
 import App from './App';
+import LoginPage from './pages/LoginPage';
 
 const { ToastContainer } = createStandaloneToast();
 
 const theme = extendTheme({
-  colors: {
-    primary: 'blue',
-    white: COLORS.white,
-    black: COLORS.black,
-    bgGrey: COLORS.bgGrey,
-    headingGrey: COLORS.headingGrey,
-    btnbg: COLORS.yellow,
+    colors: {
+        primary: 'blue',
+        white: COLORS.white,
+        black: COLORS.black,
+        bgGrey: COLORS.bgGrey,
+        headingGrey: COLORS.headingGrey,
+        btnbg: COLORS.yellow,
 
-    tablegray: {
-      500: '#F9FBFB',
+        tablegray: {
+            500: '#F9FBFB'
+        },
+        lightgreen: {
+            500: '#3C7B79'
+        }
     },
-    lightgreen: {
-      500: '#3C7B79',
-    },
-  },
-  fonts: {
-    heading: 'Open Sans',
-    body: `'Turbine-Medium', sans-serif`,
-    family: `'Turbine-Medium'`,
-  },
+    fonts: {
+        heading: 'Open Sans',
+        body: `'Turbine-Medium', sans-serif`,
+        family: `'Turbine-Medium'`
+    }
 });
 
 const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <App />,
-  },
-  {
-    path: '/register',
-    element: <Register />,
-  },
-  {
-    path: '/login',
-    element: <Login />,
-  },
+    {
+        path: '/',
+        element: <App />
+    },
+    {
+        path: '/register',
+        element: <Register />
+    },
+    {
+        path: '/login',
+        element: <Login />
+    },
+
+    {
+        path: '/login2',
+        element: <LoginPage />
+    }
 ]);
 
 // Sentry.init({
@@ -64,10 +70,10 @@ const router = createBrowserRouter([
 //   replaysOnErrorSampleRate: 1.0, // If you're not already sampling the entire session, change the sample rate to 100% when sampling sessions where errors occur.
 // });
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <React.StrictMode>
-    <ChakraProvider theme={theme}>
-      <RouterProvider router={router} />
-      <ToastContainer />
-    </ChakraProvider>
-  </React.StrictMode>
+    <React.StrictMode>
+        <ChakraProvider theme={theme}>
+            <RouterProvider router={router} />
+            <ToastContainer />
+        </ChakraProvider>
+    </React.StrictMode>
 );
