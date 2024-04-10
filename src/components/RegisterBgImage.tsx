@@ -2,12 +2,8 @@ import { Box, Flex, Text } from '@chakra-ui/react';
 
 import backgroundImage from '../assets/image/loginBgImg.png';
 import { COLORS } from '../constants/colors';
-import { HeaderProps } from '../interfaces/forms/pageProps';
 
-export const BackgroundImage = ({
-    heading,
-    subHeading
-}: HeaderProps): JSX.Element => {
+export const BackgroundImage = (): JSX.Element => {
     return (
         <Flex
             width={'100%'}
@@ -24,10 +20,10 @@ export const BackgroundImage = ({
                 p={['2rem', '3rem', '4rem']}
             >
                 <Text fontSize={'2rem'} mb='1rem'>
-                    {heading}
+                    Sell, Grow, Manage
                 </Text>
                 <Text fontSize='2.6rem' lineHeight={1.2}>
-                    {subHeading}
+                    Start Selling Online To Your Customers With Ease
                 </Text>
             </Box>
         </Flex>

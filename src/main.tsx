@@ -14,6 +14,7 @@ import Register from './pages/Register';
 import Login from './pages/Login';
 import App from './App';
 import LoginPage from './pages/LoginPage';
+import RegisterPage from './pages/RegisterPage';
 
 const { ToastContainer } = createStandaloneToast();
 
@@ -57,6 +58,11 @@ const router = createBrowserRouter([
     {
         path: '/login2',
         element: <LoginPage />
+    },
+
+    {
+        path: '/register2',
+        element: <RegisterPage />
     }
 ]);
 
