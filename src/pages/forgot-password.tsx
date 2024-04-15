@@ -33,7 +33,7 @@ const ForgotPassword = () => {
     return (
         <ResponsiveAuthWrapper heading='' subHeading=''>
             <Box width={'100%'} height={'100%'} pb='6rem'>
-                <AuthHeader heading='Reset Password' />
+                <AuthHeader heading='Forgot Password' />
                 <Box mt='1.5rem'>
                     <CustomInputGroup
                         placeholder={'Enter your email'}
@@ -60,7 +60,7 @@ const ForgotPassword = () => {
 
                 <Box position='relative' mt='3.5rem'>
                     <LargeBtn
-                        text={'Reset Password'}
+                        text={'Send Link'}
                         bg={'primary'}
                         color={COLORS.black}
                         h={['4rem', '4rem', '4.5rem']}
