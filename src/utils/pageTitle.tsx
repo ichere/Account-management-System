@@ -1,24 +1,29 @@
 import { useEffect, useRef } from 'react';
 
 export enum PageTitle {
-  Home = 'Project | Home',
-  Register = 'Project | Register',
-  Login = 'Project | Login',
+    Home = 'Project | Home',
+    Register = 'Project | Sign Up',
+    Login = 'Project | Login',
+    ForgotPassword = 'Project | Forgot Password',
+    VerifyEmail = 'Project | Email Verification'
 }
 
-export const useDocumentTitle = (title: string, prevailOnUnmount = false): void => {
-  const defaultTitle = useRef(document.title);
+export const useDocumentTitle = (
+    title: string,
+    prevailOnUnmount = false
+): void => {
+    const defaultTitle = useRef(document.title);
 
-  useEffect(() => {
-    document.title = title;
-  }, [title]);
+    useEffect(() => {
+        document.title = title;
+    }, [title]);
 
-  useEffect(
-    () => () => {
-      if (!prevailOnUnmount) {
-        document.title = defaultTitle.current;
-      }
-    },
-    [],
-  );
+    useEffect(
+        () => () => {
+            if (!prevailOnUnmount) {
+                document.title = defaultTitle.current;
+            }
+        },
+        []
+    );
 };
