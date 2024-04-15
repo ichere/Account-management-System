@@ -1,10 +1,10 @@
 export const ROUTES = {
-  profile: '/profile'
+    profile: '/profile'
 };
 
 export const UNAUTHENTICATED_ROUTES = {
-  landing: '/',
-  login: '/login',
-  signUp: '/signUp',
-  resetPassword: './resetPassword',
+    landing: '/',
+    login: '/login',
+    signUp: '/signUp',
+    resetPassword: '/resetPassword'
 };

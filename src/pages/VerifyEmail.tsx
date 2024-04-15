@@ -12,8 +12,8 @@ import { LargeBtn } from '../components/LargeBtn';
 type FormValues = {
     email: string;
 };
-const ForgotPassword = () => {
-    useDocumentTitle(PageTitle.ForgotPassword);
+export default function VerifyEmail() {
+    useDocumentTitle(PageTitle.VerifyEmail);
     const initialFormFields: FormValues = {
         email: ''
     };
@@ -33,7 +33,7 @@ const ForgotPassword = () => {
     return (
         <ResponsiveAuthWrapper heading='' subHeading=''>
             <Box width={'100%'} height={'100%'} pb='6rem'>
-                <AuthHeader heading='Reset Password' />
+                <AuthHeader heading='Verify Your Email' />
                 <Box mt='1.5rem'>
                     <CustomInputGroup
                         placeholder={'Enter your email'}
@@ -60,7 +60,7 @@ const ForgotPassword = () => {
 
                 <Box position='relative' mt='3.5rem'>
                     <LargeBtn
-                        text={'Reset Password'}
+                        text={'Verify Email'}
                         bg={'primary'}
                         color={COLORS.black}
                         h={['4rem', '4rem', '4.5rem']}
@@ -71,6 +71,4 @@ const ForgotPassword = () => {
             </Box>
         </ResponsiveAuthWrapper>
     );
-};
-
-export default ForgotPassword;
+}

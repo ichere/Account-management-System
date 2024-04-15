@@ -10,11 +10,13 @@ import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import { COLORS } from './constants/colors';
-import Register from './pages/Register';
-import Login from './pages/Login';
+// import Register from './pages/Register';
+// import Login from './pages/Login';
 import App from './App';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
+import ForgotPassword from './pages/forgot-password';
+import VerifyEmail from './pages/VerifyEmail';
 
 const { ToastContainer } = createStandaloneToast();
 
@@ -46,23 +48,31 @@ const router = createBrowserRouter([
         path: '/',
         element: <App />
     },
-    {
-        path: '/register',
-        element: <Register />
-    },
-    {
-        path: '/login',
-        element: <Login />
-    },
+    // {
+    //     path: '/register',
+    //     element: <Register />
+    // },
+    // {
+    //     path: '/login',
+    //     element: <Login />
+    // },
 
     {
-        path: '/login2',
+        path: '/login',
         element: <LoginPage />
     },
 
     {
-        path: '/register2',
+        path: '/signUp',
         element: <RegisterPage />
+    },
+    {
+        path: '/resetPassword',
+        element: <ForgotPassword />
+    },
+    {
+        path: '/verifyEmail',
+        element: <VerifyEmail />
     }
 ]);
 
