@@ -1,31 +1,26 @@
-import { Box, Flex, useColorModeValue } from "@chakra-ui/react"
+import { Box, Flex } from "@chakra-ui/react"
 import { LargeBtn } from "../LargeBtn"
 import { COLORS } from "../../constants/colors"
 import { useState } from "react";
 import { Formcontrol } from "../FormControl";
+import { ChangeInterface } from "../../interfaces/forms/formProps";
+import { useNavigate } from "react-router-dom";
   
-type ProfileModalProps = {
-isEdit: boolean;
-profile?: Option['name'];
-btnText: string;
-onClose?: () => void | null;
-};
 
 
-const CreateProfileModal = ({
-    isEdit,
-    profile,
-    btnText,
-    onClose = () => null,
-}: ProfileModalProps): JSX.Element => {
-  const appBg = useColorModeValue(COLORS.white, COLORS.darkModeBg);
-  const appTextColor = useColorModeValue(COLORS.headingGrey, COLORS.ivory);
-  const [formValues, setFormValues] = useState({
-    name: profile?.n,
-    price: profile?.n,
-    quantity: profile?.n,
-    categoryId: profile?.n,
+const CreateProfileModal = (): JSX.Element => {
+  // const appBg = useColorModeValue(COLORS.white, COLORS.darkModeBg);
+  // const appTextColor = useColorModeValue(COLORS.headingGrey, COLORS.ivory);
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>,
+  ): void => {
+    const { name, value }: ChangeInterface = e.target;
+    setFormValues((prev) => ({ ...prev, [name]: value }));
+  };
+  const [formValues,setFormValues] = useState({
+    name: '',
   });
+  const navigate = useNavigate();
   return (
     <>
         <Flex>
@@ -44,12 +39,12 @@ const CreateProfileModal = ({
         <Flex>
             <Box width={['100%', '100%', '25rem']} mt={['', '', '3rem']}>
                 <LargeBtn
-                    text={isEdit ? 'Edit Profile' : 'Create Profile'}
-                    handleSubmit={handleSubmit}
-                    loading={isEdit ? updateLoading : loading}
+                    text={'Create Profile'}
+                    handleSubmit={() => navigate('/login')}
+                    loading={false}
                     bg={COLORS.blue}
                     color={COLORS.black}
-                    disabled={!formValues.name || !formValues.price}
+                    disabled={!formValues.name || !formValues.name}
                 />
             </Box>
         </Flex>

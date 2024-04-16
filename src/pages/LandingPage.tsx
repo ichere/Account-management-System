@@ -7,7 +7,7 @@ const LandingPage = () => {
     useDocumentTitle(PageTitle.Home);
   return (
     <>
-      {/* <Navbar /> */}
+      <Navbar />
       <HeroSection />
     </>
   )

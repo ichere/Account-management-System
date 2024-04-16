@@ -38,29 +38,29 @@ const ProfileTableRow = (): JSX.Element => {
         </Text>
       </Flex>
       <Text width={['36%', '34%', '20%']} isTruncated px={['1rem', '1rem', '0']}>
-        {formatToNaira(Balance ?? 0) || '--'}
+        {formatToNaira(0 ?? 0) || '--'}
       </Text>
 
       <Text ml={'1rem'} color={appTextColor} width={['22%', '33%', '22%']}>
-        {product?.quantity || '--'}
+        Balance
       </Text>
 
       <Text textAlign="left" width={['20rem', '100%', '22%']} display={['none', 'none', 'block']}>
-        {dayjs(product.createdAt).format('DD-MMM-YYYY')}
+        CreatedAt
       </Text>
 
       <Flex width={['20rem', '20rem', '10%']} display={['none', 'none', 'flex']}>
         <Box
           mt={'.5rem'}
           borderRadius={'.5rem'}
-          backgroundColor={product.isAvailiable ? COLORS.green : COLORS.red}
+          backgroundColor={appTextColor}
           color={appTextColor}
           height={'1rem'}
           width={'1rem'}
           textAlign={'center'}
         />
         <Text ml={'1rem'} color={appTextColor}>
-          {product?.isAvailiable ? 'Yes' : 'No'}
+          Availability
         </Text>
       </Flex>
     </Flex>
