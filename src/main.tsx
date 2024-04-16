@@ -15,7 +15,7 @@ import { COLORS } from './constants/colors';
 import App from './App';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
-import ForgotPassword from './pages/forgot-password';
+import ForgotPassword from './pages/ForgotPassword';
 import VerifyEmail from './pages/VerifyEmail';
 
 const { ToastContainer } = createStandaloneToast();

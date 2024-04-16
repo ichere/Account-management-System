@@ -1,6 +1,5 @@
 import { Flex } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
-import { COLORS } from '../constants/colors';
 import { UNAUTHENTICATED_ROUTES } from '../navigation/routes';
 
 const ForgotPasswordLink = (): JSX.Element => {

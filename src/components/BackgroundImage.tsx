@@ -1,7 +1,6 @@
 import { Box, Flex, Text } from '@chakra-ui/react';
 
 import backgroundImage from '../assets/image/loginBgImg.png';
-import { COLORS } from '../constants/colors';
 import { HeaderProps } from '../interfaces/forms/pageProps';
 
 export const BackgroundImage = ({
