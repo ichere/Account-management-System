@@ -5,7 +5,8 @@ export enum PageTitle {
     Register = 'Project | Sign Up',
     Login = 'Project | Login',
     ForgotPassword = 'Project | Forgot Password',
-    VerifyEmail = 'Project | Email Verification'
+    VerifyEmail = 'Project | Email Verification',
+    Profile = 'Project | Profile'
 }
 
 export const useDocumentTitle = (

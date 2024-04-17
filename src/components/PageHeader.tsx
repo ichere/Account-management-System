@@ -1,12 +1,11 @@
 /* eslint-disable no-nested-ternary */
-import { Box, Flex, Heading, Image, useColorModeValue } from '@chakra-ui/react';
+import { Box, Flex, Heading, Text, useColorModeValue } from '@chakra-ui/react';
 import { useState } from 'react';
 import { AiOutlineSearch } from 'react-icons/ai';
 import { BsFilter } from 'react-icons/bs';
 
-import { PlusIcon } from '@/reactIcons';
+import { PlusSquareIcon } from '@chakra-ui/icons';
 
-import logo from '../assets/images/logo.svg';
 import { COLORS } from '../constants/colors';
 import { ParentCompProps } from '../interfaces/forms/formProps';
 import CustomTableModal from './CustomTableModal';
@@ -55,18 +54,20 @@ const PageHeader = ({
         mb="2rem"
       >
         <Box>
-          <Image src={logo} height={['3rem', '4rem', '5rem']} width={['5rem', '5rem', '6rem']} />
+          <Text>LOGO</Text>
         </Box>
         <Flex align="center" gap="1rem">
           <Box position="relative">
             <AiOutlineSearch
               size={BUTTON_ICON_SIZE + 2}
-              color={COLORS.yellow}
+              color={COLORS.blue}
               onClick={() => setShowSearchBar(!showSearchBar)}
             />
           </Box>
 
           <CustomDrawer
+            heading=''
+            subHeading=''
             size="xl"
             height={height}
             cursor="pointer"
@@ -84,7 +85,7 @@ const PageHeader = ({
                   childComp={<BsFilter size={BUTTON_ICON_SIZE} />}
                 />
               ) : (
-                <BsFilter size={BUTTON_ICON_SIZE + 2} color={COLORS.yellow} fontWeight="bold" />
+                <BsFilter size={BUTTON_ICON_SIZE + 2} color={COLORS.blue} fontWeight="bold" />
               )
             }
           >
@@ -130,6 +131,8 @@ const PageHeader = ({
         >
           <Box display={['none', 'none', 'block']}>
             <CustomDrawer
+              heading=''
+              subHeading=''
               size="xl"
               height={height}
               cursor="pointer"
@@ -156,6 +159,8 @@ const PageHeader = ({
           </Box>
           {btn && (
             <CustomTableModal
+              heading=''
+              subHeading=''
               size={size || '6xl'}
               height={height}
               cursor="pointer"
@@ -173,7 +178,7 @@ const PageHeader = ({
                     handleSubmit={handleSubmit}
                   />
                 ) : (
-                  <PlusIcon size={BUTTON_ICON_SIZE} color={COLORS.yellow} fontWeight="bold" />
+                  <PlusSquareIcon size={BUTTON_ICON_SIZE} color={COLORS.yellow} fontWeight="bold" />
                 )
               }
             >

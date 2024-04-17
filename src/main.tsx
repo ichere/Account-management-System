@@ -17,6 +17,7 @@ import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import ForgotPassword from './pages/ForgotPassword';
 import VerifyEmail from './pages/VerifyEmail';
+import ProfilePage from './pages/ProfilePage';
 
 const { ToastContainer } = createStandaloneToast();
 
@@ -73,6 +74,10 @@ const router = createBrowserRouter([
     {
         path: '/verifyEmail',
         element: <VerifyEmail />
+    },
+    {
+        path: '/profile',
+        element: <ProfilePage />
     }
 ]);
 
