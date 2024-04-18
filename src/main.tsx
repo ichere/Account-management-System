@@ -15,9 +15,11 @@ import { COLORS } from './constants/colors';
 import App from './App';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
-import ForgotPassword from './pages/ForgotPassword';
 import VerifyEmail from './pages/VerifyEmail';
 import ProfilePage from './pages/ProfilePage';
+import ForgotPasswordPage from './pages/ForgotPasswordPage';
+import PasswordResetPage from './pages/PasswordResetPage';
+import ResetSuccessPage from './pages/ResetSuccessPage';
 
 const { ToastContainer } = createStandaloneToast();
 
@@ -67,9 +69,26 @@ const router = createBrowserRouter([
         path: '/signUp',
         element: <RegisterPage />
     },
+
     {
-        path: '/resetPassword',
-        element: <ForgotPassword />
+        path: '/resetSuccess',
+        element: <ResetSuccessPage setPasswordReset={function (arg: string): void {
+            throw new Error('Function not implemented.');
+        } } />
+    },
+
+    {
+        path: '/forgotPassword',
+        element: <ForgotPasswordPage setPasswordReset={function (arg: string): void {
+            throw new Error('Function not implemented.');
+        } } />
+    },
+    
+    {
+        path: '/passwordReset',
+        element: <PasswordResetPage setPasswordReset={function (arg: string): void {
+            throw new Error('Function not implemented.');
+        } } />
     },
     {
         path: '/verifyEmail',
