@@ -40,8 +40,8 @@ const LoginPage = () => {
     };
     return (
         <ResponsiveAuthWrapper
-            heading='Sell, Grow, Manage'
-            subHeading='Start Selling Online To Your Customers With Ease'
+            heading='Create, Track, Manage'
+            subHeading='Login to your Account & start book keeping'
         >
             <Box width={'100%'} height={'100%'} pb='6rem'>
                 <AuthHeader heading='Login to Your Account' />

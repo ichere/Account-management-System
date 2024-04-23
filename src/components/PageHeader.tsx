@@ -178,7 +178,7 @@ const PageHeader = ({
                     handleSubmit={handleSubmit}
                   />
                 ) : (
-                  <PlusSquareIcon size={BUTTON_ICON_SIZE} color={COLORS.yellow} fontWeight="bold" />
+                  <PlusSquareIcon  color={COLORS.yellow} fontWeight="bold" />
                 )
               }
             >
