@@ -11,7 +11,7 @@ import { PageTitle, useDocumentTitle } from "../utils/pageTitle"
 const ProfilePage = () => {
   useDocumentTitle(PageTitle.Profile);
   return (
-    <PageWrapper  heading={"Welcome to your Profile"} subHeading={"profile"} >
+    <PageWrapper  heading={"Welcome to your Profile"} subHeading={"profiles"} >
       {/* <PageHeader
         header="Profiles"
         loading={false}
