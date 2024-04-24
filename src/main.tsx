@@ -19,7 +19,7 @@ import ForgotPassword from './pages/ForgotPassword';
 import VerifyEmail from './pages/VerifyEmail';
 import ProfilePage from './pages/ProfilePage';
 
-const { ToastContainer } = createStandaloneToast();
+const { toast, ToastContainer } = createStandaloneToast();
 
 const theme = extendTheme({
     colors: {
@@ -80,6 +80,44 @@ const router = createBrowserRouter([
         element: <ProfilePage />
     }
 ]);
+
+export const errorNotifier = (errorMessage: string) => {
+    return toast({
+      title: "Error",
+      description:
+        typeof errorMessage === "string" ? errorMessage : "SOMETHING WENT WRONG",
+      status: "error",
+      duration: 5000,
+      isClosable: true,
+      position: "top-right",
+    });
+  };
+  
+  export const successNotifier = (info: string) => {
+    return toast({
+      title: "Success",
+      description: info,
+      status: "success",
+      duration: 5000,
+      isClosable: true,
+      position: "top",
+    });
+  };
+  
+  export const shortNotifier = (info: string) => {
+    return toast({
+      title: "Success",
+      description: info,
+      status: "success",
+      duration: 5000,
+      isClosable: true,
+      position: "bottom",
+    });
+  };
+
+  export const errorMessage = (data: any) => {
+    return data.response.data.message;
+  };
 
 // Sentry.init({
 //   dsn: 'https://31069d5c32e04ac0814667b90827897b@o523824.ingest.sentry.io/4505128370896896',

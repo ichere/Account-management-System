@@ -1,0 +1,30 @@
+import axios, { AxiosHeaders } from "axios";
+
+export * from "./routes.constant";
+
+export const baseURL = "http://localhost:4000/api/v1";
+const axiosInstance = axios.create({
+  baseURL,
+  headers: {
+    Accept: "application/json, text/plain, */*",
+    "Content-Type": "application/json ",
+    "Access-Control-Allow-Headers": "Content-Type",
+  },
+});
+
+const addTokenToRequest = async (req: any) => {
+  const token = sessionStorage.getItem("#ACCOUNTFE#");
+  req.headers = { ...req.headers } as AxiosHeaders;
+  if (req.headers) {
+    req.headers.Authorization = token;
+  } else {
+    req.headers = {
+      Authorization: token,
+    };
+  }
+  return req;
+};
+
+axiosInstance.interceptors.request.use(addTokenToRequest);
+
+export default axiosInstance;

@@ -81,8 +81,10 @@ export type SignUpFormValues = {
   lastName: string;
 };
 
-export type ProfileFormValues = LoginFormValues & {
-  firstName: string;
-  lastName: string;
-  id: number;
+export type ProfileFields = {
+  name: string;
+  description: string;
+  bankName: string;
+  accountNumber: number;
+  balance: number;
 };
