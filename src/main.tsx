@@ -10,8 +10,6 @@ import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import { COLORS } from './constants/colors';
-// import Register from './pages/Register';
-// import Login from './pages/Login';
 import App from './App';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
@@ -49,14 +47,6 @@ const router = createBrowserRouter([
         path: '/',
         element: <App />
     },
-    // {
-    //     path: '/register',
-    //     element: <Register />
-    // },
-    // {
-    //     path: '/login',
-    //     element: <Login />
-    // },
 
     {
         path: '/login',
