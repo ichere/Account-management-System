@@ -5,15 +5,17 @@ import ResponsiveAuthWrapper from '../components/ResponsiveAuthWrapper';
 import AuthHeader from '../components/AuthHeader';
 import { COLORS } from '../constants/colors';
 import { LargeBtn } from '../components/LargeBtn';
+import { PageTitle, useDocumentTitle } from '../utils/pageTitle';
 
 
 const ResetSuccessPage = (): JSX.Element => {
+  useDocumentTitle(PageTitle.Reset_Successful);
   const [loading, setLoading] = useState<boolean>(false);
   const handleSubmit = async () => {
     setLoading(false);
   };
   return (
-    <ResponsiveAuthWrapper heading={''} subHeading={''}>
+    <ResponsiveAuthWrapper heading={'Create, Track, Manage'} subHeading={'Password changed sucessfully!'}>
       <Box width={'100%'}>
         <AuthHeader heading="Forgot Password" />
         <Flex

@@ -5,6 +5,8 @@ export enum PageTitle {
     Register = 'Project | Sign Up',
     Login = 'Project | Login',
     ForgotPassword = 'Project | Forgot Password',
+    Password_Reset = 'Project | Reset Password',
+    Reset_Successful = 'Project | Reset Successful',
     VerifyEmail = 'Project | Email Verification',
     Profile = 'Project | Profile'
 }

@@ -8,10 +8,12 @@ import AuthHeader from '../components/AuthHeader';
 import { CustomInputGroup } from '../components/CustomInputGroup';
 import { COLORS } from '../constants/colors';
 import { LargeBtn } from '../components/LargeBtn';
+import { PageTitle, useDocumentTitle } from '../utils/pageTitle';
 
 
 
 const PasswordResetPage = (): JSX.Element => {
+  useDocumentTitle(PageTitle.Password_Reset);
   const navigate = useNavigate();
   const [loading, setLoading] = useState<boolean>(false);
   const [formValues, setFormValues] = useState<LoginFormValues>({
@@ -28,7 +30,7 @@ const PasswordResetPage = (): JSX.Element => {
     setLoading(false);
   };
   return (
-    <ResponsiveAuthWrapper  heading={''} subHeading={''}>
+    <ResponsiveAuthWrapper  heading={'Create, Track, Manage'} subHeading={'Reset your Password and continue!'}>
       <Box width={'100%'}>
         <AuthHeader heading="Password Reset" subHeading="Create a new password" />
         <Box mt="1.5rem">
