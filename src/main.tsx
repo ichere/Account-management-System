@@ -17,6 +17,8 @@ import ForgotPassword from './pages/ForgotPassword';
 import VerifyEmail from './pages/VerifyEmail';
 import ProfilePage from './pages/ProfilePage';
 import Admin from './pages/admin';
+import ResetSuccessPage from './pages/ResetSuccessPage';
+import PasswordResetPage from './pages/PasswordResetPage';
 
 const { toast, ToastContainer } = createStandaloneToast();
 const theme = extendTheme({
@@ -62,6 +64,14 @@ const router = createBrowserRouter([
   {
     path: '/resetPassword',
     element: <ForgotPassword />,
+  },
+  {
+    path: '/password_reset',
+    element: <PasswordResetPage />,
+  },
+  {
+    path: '/reset_success',
+    element: <ResetSuccessPage />,
   },
   {
     path: '/verifyEmail',
