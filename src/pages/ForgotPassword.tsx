@@ -31,7 +31,7 @@ const ForgotPassword = () => {
         // await login();
     };
     return (
-        <ResponsiveAuthWrapper heading='' subHeading=''>
+        <ResponsiveAuthWrapper heading='Create, Track, Manage' subHeading='Check email for reset password link!'>
             <Box width={'100%'} height={'100%'} pb='6rem'>
                 <AuthHeader heading='Forgot Password' />
                 <Box mt='1.5rem'>

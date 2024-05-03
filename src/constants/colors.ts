@@ -20,7 +20,7 @@ export const COLORS = {
   darkPurple: '180656',
   pink: '#FDF5CE',
   lightPink: '#FEFAE640',
-  yellow: '#F3CC09',
+  yellow: '#6C63FF',
   lightYellow: '#FBEA99',
   green: '#54CC76',
   facebookBlue: '#3B5998',
