@@ -1,4 +1,4 @@
-import { Box, Button, Text } from '@chakra-ui/react';
+import { Box, Button, Image, Text } from '@chakra-ui/react';
 
 const Navbar = () => {
   return (
@@ -18,7 +18,7 @@ const Navbar = () => {
         fontSize={{ base: 18, md: 28 }}
         color={'primary'}
       >
-        Evecountly
+        <Image src='/images/bookippa-logo.svg' />
       </Text>
       <Box
         display='flex'
