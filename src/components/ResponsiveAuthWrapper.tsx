@@ -1,9 +1,10 @@
-import { Box, Flex, Text } from '@chakra-ui/react';
+import { Box, Flex, Image } from '@chakra-ui/react';
 
 // import logo from '../assets/images/logo.svg';
 import { COLORS } from '../constants/colors';
 import { ReactChildren } from '../interfaces/forms/children';
 import { BackgroundImage } from './BackgroundImage';
+import LogoImage from '../assets/image/bookippa-logo.svg'
 
 const ResponsiveAuthWrapper = ({
     children,
@@ -42,8 +43,9 @@ const ResponsiveAuthWrapper = ({
                     justify='center'
                     pt={['2.5rem', '2.5rem', '0']}
                 >
-                    {/* <Image src={logo} height={['6rem', '10rem']} width={['6rem', '7rem', '10rem']} /> */}
-                    <Text>LOGO</Text>
+                    <Box w='40'>
+                            <Image w='full' src={LogoImage} />
+                        </Box>
                 </Flex>
                 {children}
             </Box>

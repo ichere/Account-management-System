@@ -1,8 +1,9 @@
-import { Box, Flex, Text } from '@chakra-ui/react';
+import { Box, Flex, Image, Text } from '@chakra-ui/react';
 import { LargeBtn } from './LargeBtn';
 import { COLORS } from '../constants/colors';
 import { TAB_BREAKPOINT } from '../constants/appConstants';
 import { useNavigate } from 'react-router-dom';
+import LogoImage from '../assets/image/bookippa-logo.svg'
 
 const Navbar = () => {
     const navigate = useNavigate();
@@ -20,8 +21,8 @@ const Navbar = () => {
                         p='2rem'
                         align='center'
                     >
-                        <Box>
-                            <Text>LOGO</Text>
+                        <Box w='40'>
+                            <Image w='full' src={LogoImage} />
                         </Box>
                         <Box width={'5.5rem'}>
                             <LargeBtn
@@ -47,8 +48,8 @@ const Navbar = () => {
                     zIndex={10}
                     boxShadow={'md'}
                 >
-                    <Box>
-                        <Text>LOGO</Text>
+                    <Box w='40'>
+                        <Image w='full' src={LogoImage} />
                     </Box>
                     <Flex alignItems={'center'} gap={'1.5rem'}>
                         <Box width={['5.5rem', '10rem', '13rem']}>
