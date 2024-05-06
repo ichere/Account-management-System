@@ -1,5 +1,5 @@
 /* eslint-disable no-nested-ternary */
-import { Box, Flex, Heading, Text, useColorModeValue } from '@chakra-ui/react';
+import { Box, Flex, Heading, Image, useColorModeValue } from '@chakra-ui/react';
 import { useState } from 'react';
 import { AiOutlineSearch } from 'react-icons/ai';
 import { BsFilter } from 'react-icons/bs';
@@ -13,6 +13,7 @@ import { LargeBtn } from './LargeBtn';
 import SearchField from './SearchField';
 import { BUTTON_ICON_SIZE, TAB_BREAKPOINT } from '../constants/appConstants';
 import CustomDrawer from './CustomDrawer';
+import LogoImage from '../assets/image/bookippa-logo.svg'
 
 type HeaderProp = Omit<ParentCompProps, 'bg' | 'color'> & {
   header: string;
@@ -53,9 +54,9 @@ const PageHeader = ({
         marginLeft="45%"
         mb="2rem"
       >
-        <Box>
-          <Text>LOGO</Text>
-        </Box>
+        <Box w='40'>
+                            <Image w='full' src={LogoImage} />
+                        </Box>
         <Flex align="center" gap="1rem">
           <Box position="relative">
             <AiOutlineSearch

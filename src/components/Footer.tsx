@@ -1,9 +1,10 @@
-import { Box, Flex, Text } from '@chakra-ui/react';
+import { Box, Flex, Text, Image } from '@chakra-ui/react';
 import { BsInstagram, BsTwitter } from 'react-icons/bs';
 import { FaFacebook } from 'react-icons/fa';
 
 import { LANDING_PARAGRAPH_FONT } from '../constants/appConstants';
 import { COLORS } from '../constants/colors';
+import LogoImage from '../assets/image/bookippa-logo.svg'
 
 import CustomLink from './CustomLink';
 
@@ -24,9 +25,9 @@ const LandFooter = (): JSX.Element => {
         justifyContent={'space-between'}
       >
         <Box maxW={['30rem']}>
-          <Box>
-            <Text>LOGO</Text>
-          </Box>
+        <Box w='40'>
+                            <Image w='full' src={LogoImage} />
+                        </Box>
           <Text fontSize={LANDING_PARAGRAPH_FONT} color={COLORS.deepGray} mt="1rem">
             Online Book-keeping Application for Small Medium Enterprises
           </Text>
