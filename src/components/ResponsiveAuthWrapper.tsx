@@ -1,6 +1,5 @@
 import { Box, Flex, Image } from '@chakra-ui/react';
 
-// import logo from '../assets/images/logo.svg';
 import { COLORS } from '../constants/colors';
 import { ReactChildren } from '../interfaces/forms/children';
 import { BackgroundImage } from './BackgroundImage';
