@@ -4,25 +4,12 @@ import PageWrapper from "../components/PageWrapper"
 import { BUTTON_ICON_SIZE, TAB_BREAKPOINT } from "../constants/appConstants"
 import { LargeBtn } from "../components/LargeBtn"
 import { PageTitle, useDocumentTitle } from "../utils/pageTitle";
-import { useState } from 'react';
-import { Button } from '@chakra-ui/react';
-import DeleteModal from '../components/DeleteModal';
-import ProfileModal from "../components/ProfileModal";
+import ProfileTableHead from "../components/profile/ProfileTableHead"
+import ProfileTableRow from "../components/profile/ProfileTableRow"
 
 
-const ProfilePage: React.FC = () => {
-  useDocumentTitle(PageTitle.Profile);
-  const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
-  const [isProfileModalOpen, setIsProfileModalOpen] = useState(false);
-
-  const handleDelete = () => {
-    // Your delete logic here
-    setIsDeleteModalOpen(false);
-
-    // const handleAddProfile = () => {
-    //   // Your save logic here
-    //   setIsProfileModalOpen(false);
-    };
+const ProfilePage = () => {
+  useDocumentTitle(PageTitle.Profile); 
     return (
       <PageWrapper heading={"Welcome to your Profile"} subHeading={"profiles"}>
         <PageHeader
@@ -41,26 +28,9 @@ const ProfilePage: React.FC = () => {
             <LargeBtn text="Add Order" bg={""} color={""} loading={false} />
           }
         ></PageHeader>
-        <div>
-          <Button onClick={() => setIsDeleteModalOpen(true)}>
-            Delete Profile
-          </Button>
-          <DeleteModal
-            isOpen={isDeleteModalOpen}
-            onClose={() => setIsDeleteModalOpen(false)}
-            onDelete={handleDelete}
-          />
-        </div>
-        <div>
-        <Button onClick={() => setIsProfileModalOpen(true)}>
-          Edit Profile
-        </Button>
-        <ProfileModal
-          isOpen={isProfileModalOpen}
-          onClose={() => setIsProfileModalOpen(false)}
-          isEditing={false}
-        />
-        </div>
+        <ProfileTableHead />
+        <ProfileTableRow />
+        
       </PageWrapper>
     );
   };
