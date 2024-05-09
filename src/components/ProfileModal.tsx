@@ -26,7 +26,6 @@ const ProfileModal: React.FC<ProfileModalProps> = ({
     isEditing,
 }) => {
   const [balance, setBalance] = useState("");
-  const [userId, setUserId] = useState("");
   const [purpose, setPurpose] = useState("");
   const [bankName, setBankName] = useState("");
   const [accountType, setAccountType] = useState("");
