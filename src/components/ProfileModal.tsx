@@ -35,7 +35,7 @@ const ProfileModal: React.FC<ProfileModalProps> = ({
     <Modal isOpen={isOpen} onClose={onClose} isCentered>
       <ModalOverlay />
       <ModalContent>
-        <ModalHeader>{isEditing ? "Edit Profile" : "Add Profile"}</ModalHeader>
+        <ModalHeader>{isEditing ? "Add Profile" : "Edit Profile"}</ModalHeader>
         <ModalCloseButton />
         <ModalBody>
           <FormControl>
@@ -47,15 +47,7 @@ const ProfileModal: React.FC<ProfileModalProps> = ({
               }) => setBalance(e.target.value)}
             />
           </FormControl>
-          <FormControl>
-            <FormLabel>User ID</FormLabel>
-            <Input
-              value={userId}
-              onChange={(e: {
-                target: { value: React.SetStateAction<string> };
-              }) => setUserId(e.target.value)}
-            />
-          </FormControl>
+          
           <FormControl>
             <FormLabel>Purpose</FormLabel>
             <Input
@@ -99,7 +91,7 @@ const ProfileModal: React.FC<ProfileModalProps> = ({
             </Button>
           ) : (
             <Button colorScheme="blue" ml={3}>
-              Add Profile
+              Save
             </Button>
           )}
         </ModalFooter>
