@@ -1,4 +1,4 @@
-import { Box, Flex, Image, Text } from '@chakra-ui/react';
+import { Box, Flex, Image } from '@chakra-ui/react';
 import { LargeBtn } from './LargeBtn';
 import { COLORS } from '../constants/colors';
 import { TAB_BREAKPOINT } from '../constants/appConstants';
