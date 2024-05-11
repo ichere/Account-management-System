@@ -2,7 +2,7 @@ import axios, { AxiosHeaders } from "axios";
 
 export * from "./routes.constant";
 
-export const baseURL = "http://localhost:4000/api/v1";
+export const baseURL = "https://isw-accountmgt-gp1-be.onrender.com/swagger/index.html";
 const axiosInstance = axios.create({
   baseURL,
   headers: {
@@ -13,7 +13,7 @@ const axiosInstance = axios.create({
 });
 
 const addTokenToRequest = async (req: any) => {
-  const token = sessionStorage.getItem("#ACCOUNTFE#");
+  const token = sessionStorage.getItem("#BOOKKIPAFE#");
   req.headers = { ...req.headers } as AxiosHeaders;
   if (req.headers) {
     req.headers.Authorization = token;
